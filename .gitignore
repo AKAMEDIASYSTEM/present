@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.iml
 .gradle
 /local.properties
@@ -7,6 +8,8 @@
 /build
 /captures
 .externalNativeBuild
+=======
+>>>>>>> 548db66abed937b0a734447d6f16e7c34238a93d
 # Built application files
 *.apk
 *.ap_
@@ -44,6 +47,7 @@ captures/
 # Intellij
 *.iml
 .idea/workspace.xml
+<<<<<<< HEAD
 .idea/tasks.xml
 .idea/gradle.xml
 .idea/dictionaries
@@ -62,3 +66,8 @@ google-services.json
 freeline.py
 freeline/
 freeline_project_description.json
+=======
+
+# Keystore files
+*.jks
+>>>>>>> 548db66abed937b0a734447d6f16e7c34238a93d
