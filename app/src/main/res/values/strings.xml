@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Present</string>
+    <string name="app_titlebar">Present - enter your creds</string>
+    <string name="title_activity_present">presentActivity</string>
+    <string name="userKey">userKey</string>
+    <string name="username">username</string>
+    <string name="lockFeed">lockFeed</string>
+    <string name="unlockFeed">unlockFeed</string>
+    <string name="usernameLabel">Enter your Adafruit.io username</string>
+    <string name="userKeyLabel">Enter your Adafruit.io API Key</string>
+    <string name="lockFeedLabel">[Lowercase] "Lock" feed title</string>
+    <string name="unlockFeedLabel">[Lowercase] "Unock" feed title</string>
+    <string name="spName">prefs</string>
+    <string name="adafruit_io_endpoint">https://io.adafruit.com/api/v2/</string>
+</resources>
