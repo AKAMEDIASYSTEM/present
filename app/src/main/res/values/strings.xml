@@ -12,4 +12,6 @@
     <string name="unlockFeedLabel">[Lowercase] "Unock" feed title</string>
     <string name="spName">prefs</string>
     <string name="adafruit_io_endpoint">https://io.adafruit.com/api/v2/</string>
+    <string name="lockAction">com.weft.present.present.action.LOCK</string>
+    <string name="unlockAction">com.weft.present.present.action.UNLOCK</string>
 </resources>
