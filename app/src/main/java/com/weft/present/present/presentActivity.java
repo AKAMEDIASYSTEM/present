@@ -2,7 +2,6 @@ package com.weft.present.present;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -29,11 +28,13 @@ public class presentActivity extends AppCompatActivity {
         String lockFeed = sp.getString(this.getString(R.string.lockFeed), "");
         String unlockFeed = sp.getString(this.getString(R.string.unlockFeed), "");
         String failLog = sp.getString(this.getString(R.string.failures), "failLog is empty");
+        String sucLog = sp.getString(this.getString(R.string.successes), "sucLog is empty");
         Log.d(TAG, "userKey is "+ userKey);
         Log.d(TAG, "username is "+ username);
         Log.d(TAG, "lockFeed is "+ lockFeed);
         Log.d(TAG, "unlockFeed is "+ unlockFeed);
         Log.d(TAG, "failLog is "+ failLog);
+        Log.d(TAG, "sucLog is "+ sucLog);
         setContentView(R.layout.activity_present);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -81,11 +82,15 @@ public class presentActivity extends AppCompatActivity {
             TextView tv = (TextView)findViewById(R.id.failLog);
             tv.setText(failLog);
         }
+        if(!sucLog.isEmpty()){
+            TextView tv = (TextView)findViewById(R.id.sucLog);
+            tv.setText(sucLog);
+        }
 
-        IntentFilter ifl = new IntentFilter();
-        ifl.addAction(Intent.ACTION_USER_PRESENT);
-        ifl.addAction((Intent.ACTION_SCREEN_OFF));
-        registerReceiver(new myUserPresent(), ifl);
+//        IntentFilter ifl = new IntentFilter();
+//        ifl.addAction(Intent.ACTION_USER_PRESENT);
+//        ifl.addAction((Intent.ACTION_SCREEN_OFF));
+//        registerReceiver(new myUserPresent(), ifl);
 
     }
 

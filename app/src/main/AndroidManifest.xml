@@ -16,14 +16,15 @@
         <receiver
             android:name=".myUserPresent"
             android:enabled="true"
-            android:exported="true" />
+            android:label="myUserPresentBroadcastReceiver">
 
         <intent-filter>
-            <action android:name="android.intent.ACTION_USER_PRESENT" />
-            <action android:name="android.intent.ACTION_SCREEN_OFF" />
+            <action android:name="android.intent.action.USER_PRESENT" android:enabled="true" />
+            <action android:name="android.intent.action.SCREEN_OFF" android:enabled="true" />
             <action android:name="android.intent.action.BOOT_COMPLETED" />
             <action android:name="android.intent.action.QUICKBOOT_POWERON" />
         </intent-filter>
+        </receiver>
 
         <activity
             android:name=".presentActivity"
@@ -31,7 +32,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

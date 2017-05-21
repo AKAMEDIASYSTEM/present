@@ -73,6 +73,12 @@ public class UploadIntentService extends IntentService {
             @Override
             public void onSuccess(int responseCode, Header[] headers, String responseBody) {
                 // Successfully got a response
+                Long tsLong = System.currentTimeMillis()/1000;
+                String ts = tsLong.toString();
+                String oldVals = sp.getString(UploadIntentService.this.getString(R.string.successes), "");
+                SharedPreferences.Editor ed = sp.edit();
+                ed.putString(UploadIntentService.this.getString(R.string.successes), oldVals+",\n"+ts);
+                ed.commit();
                 Log.d(TAG, "AKA upload Success: " + responseBody);
             }
 
@@ -81,7 +87,7 @@ public class UploadIntentService extends IntentService {
                 // Response failed :( Trying to log these now and show them in the main Activity
                 Long tsLong = System.currentTimeMillis()/1000;
                 String ts = tsLong.toString();
-                String oldVals = sp.getString(UploadIntentService.this.getString(R.string.failures), "none");
+                String oldVals = sp.getString(UploadIntentService.this.getString(R.string.failures), "");
                 SharedPreferences.Editor ed = sp.edit();
                 ed.putString(UploadIntentService.this.getString(R.string.failures), oldVals+",\n"+ts);
                 ed.commit();
