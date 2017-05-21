@@ -78,7 +78,7 @@ public class UploadIntentService extends IntentService {
 
             @Override
             public void onFailure(int responseCode, Header[] headers, String responseBody, Throwable e) {
-                // Response failed :(
+                // Response failed :( Trying to log these now and show them in the main Activity
                 Long tsLong = System.currentTimeMillis()/1000;
                 String ts = tsLong.toString();
                 String oldVals = sp.getString(UploadIntentService.this.getString(R.string.failures), "none");

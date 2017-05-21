@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class presentActivity extends AppCompatActivity {
 
@@ -27,11 +28,12 @@ public class presentActivity extends AppCompatActivity {
         String username = sp.getString(this.getString(R.string.username), "");
         String lockFeed = sp.getString(this.getString(R.string.lockFeed), "");
         String unlockFeed = sp.getString(this.getString(R.string.unlockFeed), "");
-        String failLog = sp.getString(this.getString(R.string.failures), "");
+        String failLog = sp.getString(this.getString(R.string.failures), "failLog is empty");
         Log.d(TAG, "userKey is "+ userKey);
         Log.d(TAG, "username is "+ username);
         Log.d(TAG, "lockFeed is "+ lockFeed);
         Log.d(TAG, "unlockFeed is "+ unlockFeed);
+        Log.d(TAG, "failLog is "+ failLog);
         setContentView(R.layout.activity_present);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -74,6 +76,10 @@ public class presentActivity extends AppCompatActivity {
         if(!unlockFeed.isEmpty()){
             EditText edk = (EditText)findViewById(R.id.editText3);
             edk.setText(unlockFeed);
+        }
+        if(!failLog.isEmpty()){
+            TextView tv = (TextView)findViewById(R.id.failLog);
+            tv.setText(failLog);
         }
 
         IntentFilter ifl = new IntentFilter();
