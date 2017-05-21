@@ -38,7 +38,12 @@
 
         <service
             android:name=".UploadIntentService"
-            android:exported="false"></service>
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name=".presentActivity" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

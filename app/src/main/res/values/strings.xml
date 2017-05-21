@@ -3,6 +3,7 @@
     <string name="app_titlebar">Present - enter your creds</string>
     <string name="title_activity_present">presentActivity</string>
     <string name="userKey">userKey</string>
+    <string name="failures">failures</string>
     <string name="username">username</string>
     <string name="lockFeed">lockFeed</string>
     <string name="unlockFeed">unlockFeed</string>

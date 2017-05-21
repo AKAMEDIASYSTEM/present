@@ -79,6 +79,12 @@ public class UploadIntentService extends IntentService {
             @Override
             public void onFailure(int responseCode, Header[] headers, String responseBody, Throwable e) {
                 // Response failed :(
+                Long tsLong = System.currentTimeMillis()/1000;
+                String ts = tsLong.toString();
+                String oldVals = sp.getString(UploadIntentService.this.getString(R.string.failures), "none");
+                SharedPreferences.Editor ed = sp.edit();
+                ed.putString(UploadIntentService.this.getString(R.string.failures), oldVals+",\n"+ts);
+                ed.commit();
                 Log.d(TAG, "AKA Present uploading Failure: " + responseBody);
             }
 

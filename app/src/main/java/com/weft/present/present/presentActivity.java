@@ -27,6 +27,7 @@ public class presentActivity extends AppCompatActivity {
         String username = sp.getString(this.getString(R.string.username), "");
         String lockFeed = sp.getString(this.getString(R.string.lockFeed), "");
         String unlockFeed = sp.getString(this.getString(R.string.unlockFeed), "");
+        String failLog = sp.getString(this.getString(R.string.failures), "");
         Log.d(TAG, "userKey is "+ userKey);
         Log.d(TAG, "username is "+ username);
         Log.d(TAG, "lockFeed is "+ lockFeed);
